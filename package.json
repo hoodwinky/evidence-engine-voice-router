@@ -1,0 +1,35 @@
+{
+  "name": "@freex/evidence-engine-voice-router",
+  "version": "0.1.0",
+  "description": "Preserve dictated notes and review their route into reminders, calendar events and named automations.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
+  "exports": {
+    ".": "./src/router.mjs",
+    "./server": "./src/server.mjs"
+  },
+  "files": [
+    "src",
+    "web",
+    "docs",
+    "examples",
+    "test",
+    ".env.example",
+    "openapi.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node --env-file=.env src/server.mjs",
+    "test": "node --test test/*.test.mjs",
+    "check": "node --check src/router.mjs && node --check src/server.mjs && node --check web/app.js",
+    "demo": "node examples/plugin.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hoodwinky/evidence-engine-voice-router.git"
+  }
+}
